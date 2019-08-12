@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 use Mockery\Test\Generator\StringManipulation\Pass\MagicUnsetInterfaceDummy;
 
+
 class User extends Authenticatable implements MustVerifyEmailContract
 {
     use Notifiable;
@@ -20,7 +21,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'introduction'
+        'name', 'email', 'password', 'introduction', 'avatar',
     ];
 
     /**
